@@ -1,0 +1,32 @@
+<div *ngIf="book">
+  <div style="height: 250px; text-align: center; margin-top: 30px;" class="justify-content-center">
+    <img style="height: 100%; width: auto;" src="https://img.buzzfeed.com/buzzfeed-static/static/2015-05/6/9/enhanced/webdr07/original-29935-1430919783-25.jpg?crop=933:1399;0,11&downsize=400:*&output-format=auto&output-quality=auto" alt="">
+  </div>
+  <div style="text-align: center; margin-top: 30px;">
+    <h4>{{book.name}}</h4>
+    <h6 *ngFor="let author of book.authors">{{author}}</h6>
+  </div>  
+  <div class="row" style="margin-top: 50px;">
+      <div class="col-md-6">
+        <h4>Book Details</h4>
+        <p><b>ISBN</b><span class="float-right">{{book.isbn}}</span></p>
+        <p><b>Country</b><span class="float-right">{{book.country}}</span></p>
+        <p><b>Mediatype</b><span class="float-right">{{book.country}}</span></p>
+        <p><b>Number of Pages</b><span class="float-right">{{book.numberOfPages}}</span></p>
+        <p><b>Publisher</b><span class="float-right">{{book.publisher}}</span></p>
+        <p><b>Released</b><span class="float-right">{{book.released}}</span></p>
+        <p><b>Url:</b><span class="float-right">{{book.url}}</span></p>
+        <p><b>Mediatype</b><span class="float-right">{{book.country}}</span></p>
+      </div>
+      <div class="col-md-6">
+        <h4>Characters</h4>
+        <a href="#" *ngFor="let character of book.characters">
+          {{character}}
+        </a>
+      </div>
+  </div>
+</div>
+<div *ngIf="!book">
+  <p style="padding-top: 200px; font-size: 100pt; text-align: center;">🗡️🏰🐉</p>
+  Loading book...
+</div>

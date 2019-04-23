@@ -13,6 +13,6 @@ export class BookService {
   }
 
   getBook(name: string): Observable<Book>{
-    return this.http.get<Book>("https://www.anapioficeandfire.com/api/books/?name" + name);
+    return this.http.get<Book>("https://www.anapioficeandfire.com/api/books/?name=" + name);
   }
 }

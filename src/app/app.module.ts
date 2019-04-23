@@ -8,16 +8,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { BooksPageComponent } from './components/books-page/books-page.component';
 import { BookService } from './services/book.service';
 import { CharachterService } from './services/charachter.service';
+import { BookDetailsPageComponent } from './components/book-details-page/book-details-page.component';
 
 let routes: Route[] = [
-  { path: "", component: BooksPageComponent }
+  { path: "", component: BooksPageComponent },
+  { path: "books/:name", component: BookDetailsPageComponent}
 ];
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BooksPageComponent
+    BooksPageComponent,
+    BookDetailsPageComponent
   ],
   imports: [
     BrowserModule,
