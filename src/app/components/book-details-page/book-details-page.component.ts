@@ -3,8 +3,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { BookService } from 'src/app/services/book.service';
 import { Book } from 'src/app/models/book.type';
 import { Observable } from 'rxjs';
-import { CharachterService } from 'src/app/services/charachter.service';
-import { Charachter } from 'src/app/models/charachter.type';
+import { CharacterService } from 'src/app/services/character.service';
+import { Character } from 'src/app/models/character.type';
 
 
 @Component({
@@ -15,7 +15,7 @@ import { Charachter } from 'src/app/models/charachter.type';
 export class BookDetailsPageComponent implements OnInit {
  
   book: Book;
-  charachters: Charachter[];
+  charachters: Character[];
   constructor(private route: ActivatedRoute,
               private bookService: BookService) { }
 

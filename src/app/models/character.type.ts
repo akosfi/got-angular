@@ -1,4 +1,4 @@
-export interface Charachter {
+export interface Character {
     url: string;
     name: string;
     gender: string;

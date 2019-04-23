@@ -3,7 +3,7 @@ export interface Book {
     name: string;
     isbn: string;
     authors: string[];
-    charachters: string[];
+    characters: string[];
     numberOfPages: number;
     publisher: string;
     country: string;
